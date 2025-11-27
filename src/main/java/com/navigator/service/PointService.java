@@ -4,5 +4,5 @@ import com.navigator.domain.Point;
 import java.util.List;
 
 public interface PointService {
-    List<Point> generateRandomPoints(int n);
+    List<Point> generateRandomPoints(Integer n);
 }

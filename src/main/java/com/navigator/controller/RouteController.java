@@ -5,4 +5,5 @@ import java.util.List;
 
 public interface RouteController {
     List<Route> calculateRandomRoutes(int numberOfPoints);
+
 }
