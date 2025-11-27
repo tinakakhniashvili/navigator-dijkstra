@@ -1,6 +1,7 @@
 package com.navigator.service;
 
 import com.navigator.domain.Point;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
