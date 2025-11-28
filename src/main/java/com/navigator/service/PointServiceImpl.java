@@ -8,19 +8,18 @@ import java.util.Random;
 
 public class PointServiceImpl implements PointService {
 
+    private static final double MAX_COORD = 100.0;
+
     @Override
     public List<Point> generateRandomPoints(Integer n) {
         List<Point> points = new ArrayList<>();
         Random random = new Random();
 
-        // generate random 100 points for x and y
-        for (int i = 0; i < 100; i++) {
-            Long id = (long) (i + 1);
-            Double x = random.nextDouble() * 100;
-            Double y = random.nextDouble() * 100;
-
-            Point point = new Point(id, x, y);
-            points.add(point);
+        for (int i = 0; i < n; i++) {
+            long id = i + 1L;
+            double x = random.nextDouble() * MAX_COORD;
+            double y = random.nextDouble() * MAX_COORD;
+            points.add(new Point(id, x, y));
         }
 
         return points;
