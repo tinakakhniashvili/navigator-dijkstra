@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Route {
+    private Long id;
     private List<Point> points;
     private Double totalTime;
 
@@ -15,6 +16,14 @@ public class Route {
     public Route(List<Point> points, Double totalTime) {
         this.points = points;
         this.totalTime = totalTime;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public List<Point> getPoints() {
