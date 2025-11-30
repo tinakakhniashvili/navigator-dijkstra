@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.navigator.repository.PointRepository">
+
+    <insert id="savePoints" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO point (x, y) VALUES
+        <foreach collection="list" item="p" separator=",">
+            (#{p.x}, #{p.y})
+        </foreach>
+    </insert>
+
+    <select id="findAll" resultType="com.navigator.domain.Point">
+        SELECT id, x, y FROM point ORDER BY id;
+    </select>
+
+</mapper>

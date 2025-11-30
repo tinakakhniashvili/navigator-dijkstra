@@ -2,6 +2,8 @@ package com.navigator.service;
 
 import com.navigator.domain.Point;
 import com.navigator.domain.Route;
+import com.navigator.repository.RoutePointRepository;
+import com.navigator.repository.RouteRepository;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -11,11 +13,22 @@ import java.util.Set;
 public class RouteServiceImpl implements RouteService {
 
     private static final double SPEED = 1.0;
+    private final RouteRepository routeRepository;
+    private final RoutePointRepository routePointRepository;
+
+    public RouteServiceImpl(RouteRepository routeRepository, RoutePointRepository routePointRepository) {
+        this.routeRepository = routeRepository;
+        this.routePointRepository = routePointRepository;
+    }
 
     @Override
     public List<Route> computeRoutes(List<Point> points) {
         Route route1 = naiveRoute(points);
         Route route2 = nearestNeighborRoute(points);
+
+        // savve routes to database
+        saveRouteWithPoints(route1);
+        saveRouteWithPoints(route2);
 
         List<Route> routes = new ArrayList<>();
 
@@ -27,6 +40,17 @@ public class RouteServiceImpl implements RouteService {
             routes.add(route1);
         }
         return routes;
+    }
+
+    private void saveRouteWithPoints(Route route) {
+        // save route (autogenerates id)
+        routeRepository.saveRoute(route);
+
+        // Save route-point relationships
+        List<Point> routePoints = route.getPoints();
+        for (int i = 0; i < routePoints.size(); i++) {
+            routePointRepository.saveRoutePoint(route.getId(), routePoints.get(i).getId(), i);
+        }
     }
 
     private Route naiveRoute(List<Point> points) {
