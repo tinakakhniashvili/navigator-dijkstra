@@ -11,8 +11,16 @@
         </foreach>
     </insert>
 
-    <select id="findAll" resultType="com.solvd.navigator.domain.Point">
-        SELECT id, x, y FROM point ORDER BY id;
+    <resultMap id="PointResultMap" type="com.solvd.navigator.domain.Point">
+        <id     property="id" column="id"/>
+        <result property="x"  column="x"/>
+        <result property="y"  column="y"/>
+    </resultMap>
+
+    <select id="findAll" resultMap="PointResultMap">
+        SELECT id, x, y
+        FROM point
+        ORDER BY id;
     </select>
 
 </mapper>

@@ -9,8 +9,15 @@
         VALUES (#{totalTime});
     </insert>
 
-    <select id="findById" resultType="com.solvd.navigator.domain.Route">
-        SELECT id, total_time FROM route WHERE id = #{id};
+    <resultMap id="RouteResultMap" type="com.solvd.navigator.domain.Route">
+        <id     property="id"        column="id"/>
+        <result property="totalTime" column="total_time"/>
+    </resultMap>
+
+    <select id="findById" resultMap="RouteResultMap">
+        SELECT id, total_time
+        FROM route
+        WHERE id = #{id};
     </select>
 
 </mapper>

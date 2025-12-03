@@ -1,9 +1,10 @@
-package com.solvd.navigator.service;
+package com.solvd.navigator.service.impl;
 
 import com.solvd.navigator.domain.Point;
 import com.solvd.navigator.domain.Route;
 import com.solvd.navigator.repository.RoutePointRepository;
 import com.solvd.navigator.repository.RouteRepository;
+import com.solvd.navigator.service.RouteService;
 
 import java.util.ArrayList;
 import java.util.HashSet;

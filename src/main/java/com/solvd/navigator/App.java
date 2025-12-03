@@ -11,9 +11,9 @@ import com.solvd.navigator.repository.impl.PointRepositoryImpl;
 import com.solvd.navigator.repository.impl.RoutePointRepositoryImpl;
 import com.solvd.navigator.repository.impl.RouteRepositoryImpl;
 import com.solvd.navigator.service.PointService;
-import com.solvd.navigator.service.PointServiceImpl;
+import com.solvd.navigator.service.impl.PointServiceImpl;
 import com.solvd.navigator.service.RouteService;
-import com.solvd.navigator.service.RouteServiceImpl;
+import com.solvd.navigator.service.impl.RouteServiceImpl;
 
 import java.util.List;
 
