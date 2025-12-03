@@ -1,6 +1,6 @@
 package com.solvd.navigator.repository.impl;
 
-import com.solvd.navigator.config.MyBatisConfig;
+import com.solvd.navigator.repository.config.MyBatisConfig;
 import com.solvd.navigator.domain.Point;
 import com.solvd.navigator.repository.PointRepository;
 import org.apache.ibatis.session.SqlSession;

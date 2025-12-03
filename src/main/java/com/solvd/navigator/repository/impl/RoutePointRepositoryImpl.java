@@ -1,6 +1,6 @@
 package com.solvd.navigator.repository.impl;
 
-import com.solvd.navigator.config.MyBatisConfig;
+import com.solvd.navigator.repository.config.MyBatisConfig;
 import com.solvd.navigator.repository.RoutePointRepository;
 import org.apache.ibatis.session.SqlSession;
 
