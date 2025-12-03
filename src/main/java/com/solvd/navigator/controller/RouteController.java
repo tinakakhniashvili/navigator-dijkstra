@@ -1,6 +1,6 @@
-package com.navigator.controller;
+package com.solvd.navigator.controller;
 
-import com.navigator.domain.Route;
+import com.solvd.navigator.domain.Route;
 
 import java.util.List;
 

@@ -1,8 +1,8 @@
-package com.navigator.repository.impl;
+package com.solvd.navigator.repository.impl;
 
-import com.navigator.config.MyBatisConfig;
-import com.navigator.domain.Point;
-import com.navigator.repository.PointRepository;
+import com.solvd.navigator.config.MyBatisConfig;
+import com.solvd.navigator.domain.Point;
+import com.solvd.navigator.repository.PointRepository;
 import org.apache.ibatis.session.SqlSession;
 
 import java.util.List;

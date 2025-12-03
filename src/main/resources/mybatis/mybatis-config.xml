@@ -6,8 +6,8 @@
 <configuration>
 
     <typeAliases>
-        <typeAlias type="com.navigator.domain.Point" alias="Point"/>
-        <typeAlias type="com.navigator.domain.Route" alias="Route"/>
+        <typeAlias type="com.solvd.navigator.domain.Point" alias="Point"/>
+        <typeAlias type="com.solvd.navigator.domain.Route" alias="Route"/>
     </typeAliases>
 
     <environments default="dev">

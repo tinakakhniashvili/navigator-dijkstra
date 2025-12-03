@@ -1,8 +1,8 @@
-package com.navigator.repository.impl;
+package com.solvd.navigator.repository.impl;
 
-import com.navigator.config.MyBatisConfig;
-import com.navigator.domain.Route;
-import com.navigator.repository.RouteRepository;
+import com.solvd.navigator.config.MyBatisConfig;
+import com.solvd.navigator.domain.Route;
+import com.solvd.navigator.repository.RouteRepository;
 import org.apache.ibatis.session.SqlSession;
 
 public class RouteRepositoryImpl implements RouteRepository {

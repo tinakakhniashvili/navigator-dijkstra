@@ -1,4 +1,4 @@
-package com.navigator.domain;
+package com.solvd.navigator.domain;
 
 public class Point {
     private Long id;

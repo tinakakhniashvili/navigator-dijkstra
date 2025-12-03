@@ -1,7 +1,7 @@
-package com.navigator.service;
+package com.solvd.navigator.service;
 
-import com.navigator.domain.Point;
-import com.navigator.repository.PointRepository;
+import com.solvd.navigator.domain.Point;
+import com.solvd.navigator.repository.PointRepository;
 
 import java.util.ArrayList;
 import java.util.List;

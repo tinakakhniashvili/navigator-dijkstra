@@ -1,19 +1,19 @@
-package com.navigator;
+package com.solvd.navigator;
 
-import com.navigator.controller.RouteController;
-import com.navigator.controller.RouteControllerImpl;
-import com.navigator.domain.Route;
-import com.navigator.repository.PointRepository;
-import com.navigator.repository.RoutePointRepository;
-import com.navigator.repository.RouteRepository;
-import com.navigator.repository.impl.PointRepositoryImpl;
-import com.navigator.repository.impl.RoutePointRepositoryImpl;
-import com.navigator.repository.impl.RouteRepositoryImpl;
-import com.navigator.service.PointService;
-import com.navigator.service.PointServiceImpl;
-import com.navigator.service.RouteService;
-import com.navigator.service.RouteServiceImpl;
-import com.navigator.view.ConsoleView;
+import com.solvd.navigator.controller.RouteController;
+import com.solvd.navigator.controller.RouteControllerImpl;
+import com.solvd.navigator.domain.Route;
+import com.solvd.navigator.repository.PointRepository;
+import com.solvd.navigator.repository.RoutePointRepository;
+import com.solvd.navigator.repository.RouteRepository;
+import com.solvd.navigator.repository.impl.PointRepositoryImpl;
+import com.solvd.navigator.repository.impl.RoutePointRepositoryImpl;
+import com.solvd.navigator.repository.impl.RouteRepositoryImpl;
+import com.solvd.navigator.service.PointService;
+import com.solvd.navigator.service.PointServiceImpl;
+import com.solvd.navigator.service.RouteService;
+import com.solvd.navigator.service.RouteServiceImpl;
+import com.solvd.navigator.view.ConsoleView;
 
 import java.util.List;
 

@@ -1,9 +1,9 @@
-package com.navigator.controller;
+package com.solvd.navigator.controller;
 
-import com.navigator.domain.Point;
-import com.navigator.domain.Route;
-import com.navigator.service.PointService;
-import com.navigator.service.RouteService;
+import com.solvd.navigator.domain.Point;
+import com.solvd.navigator.domain.Route;
+import com.solvd.navigator.service.PointService;
+import com.solvd.navigator.service.RouteService;
 
 import java.util.List;
 

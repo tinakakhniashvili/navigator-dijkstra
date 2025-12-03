@@ -1,4 +1,4 @@
-package com.navigator.domain;
+package com.solvd.navigator.domain;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,7 +1,7 @@
-package com.navigator.view;
+package com.solvd.navigator.view;
 
-import com.navigator.domain.Point;
-import com.navigator.domain.Route;
+import com.solvd.navigator.domain.Point;
+import com.solvd.navigator.domain.Route;
 
 import java.util.List;
 

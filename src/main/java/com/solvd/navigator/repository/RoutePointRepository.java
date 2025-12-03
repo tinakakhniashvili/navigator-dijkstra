@@ -1,4 +1,4 @@
-package com.navigator.repository;
+package com.solvd.navigator.repository;
 
 import org.apache.ibatis.annotations.Param;
 
