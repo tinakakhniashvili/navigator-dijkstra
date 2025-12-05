@@ -17,19 +17,23 @@ public class PointServiceImpl implements PointService {
     }
 
     @Override
-    public List<Point> generateRandomPoints(Integer n) {
+    public void initializePointsIfEmpty(int count) {
+        List<Point> existing = pointRepository.findAll();
+        if (!existing.isEmpty()) {
+            return;
+        }
         List<Point> points = new ArrayList<>();
         Random random = new Random();
-
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < count; i++) {
             double x = random.nextDouble() * MAX_COORD;
             double y = random.nextDouble() * MAX_COORD;
             points.add(new Point(null, x, y));
         }
-
-        // save to database
         pointRepository.savePoints(points);
+    }
 
-        return points;
+    @Override
+    public List<Point> getAllPoints() {
+        return pointRepository.findAll();
     }
 }

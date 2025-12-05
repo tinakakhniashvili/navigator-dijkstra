@@ -18,8 +18,8 @@ public class RouteControllerImpl implements RouteController {
     }
 
     @Override
-    public List<Route> calculateRandomRoutes(int numberOfPoints) {
-        List<Point> randomPoints = pointService.generateRandomPoints(numberOfPoints);
-        return routeService.computeRoutes(randomPoints);
+    public List<Route> findShortestAndAlternativeRoutes(long startId, long endId) {
+        List<Point> points = pointService.getAllPoints();
+        return routeService.findShortestAndAlternativeRoutes(points, startId, endId);
     }
 }

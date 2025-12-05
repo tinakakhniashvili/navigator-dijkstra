@@ -7,8 +7,5 @@ import java.util.List;
 
 public interface RouteService {
 
-    // Takes points and returns one or more routes.
-    // The first one should be the fastest.
-
-    List<Route> computeRoutes(List<Point> points);
+    List<Route> findShortestAndAlternativeRoutes(List<Point> points, long startId, long endId);
 }
