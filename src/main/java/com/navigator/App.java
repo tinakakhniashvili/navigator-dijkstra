@@ -32,14 +32,28 @@ public class App {
         int numberOfPoints = 100;
         pointService.initializePointsIfEmpty(numberOfPoints);
 
+        long minId = 1;
+        long maxId = numberOfPoints;
+
+        System.out.printf("Available point ids are from %d to %d%n", minId, maxId);
+
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter start point id: ");
-        long startId = scanner.nextLong();
-        System.out.print("Enter end point id: ");
-        long endId = scanner.nextLong();
+        long startId = readValidId(scanner, "Enter start point id: ", minId, maxId);
+        long endId = readValidId(scanner, "Enter end point id: ", minId, maxId);
 
         List<Route> routes = controller.findShortestAndAlternativeRoutes(startId, endId);
         printRoutes(routes);
+    }
+
+    private static long readValidId(Scanner scanner, String prompt, long minId, long maxId) {
+        while (true) {
+            System.out.print(prompt);
+            long id = scanner.nextLong();
+            if (id >= minId && id <= maxId) {
+                return id;
+            }
+            System.out.printf("Invalid id. Please enter a value between %d and %d.%n", minId, maxId);
+        }
     }
 
     private static void printRoutes(List<Route> routes) {
