@@ -49,7 +49,7 @@ public class App {
             for (Point p : route.getPoints()) {
                 System.out.printf("Point %d: (%.2f, %.2f)%n", p.getId(), p.getX(), p.getY());
             }
-            System.out.printf("Total time: %.2f seconds%n", route.getTotalTime());
+            System.out.printf("Total time: %.4f seconds%n", route.getTotalTime());
             System.out.println();
             idx++;
         }
